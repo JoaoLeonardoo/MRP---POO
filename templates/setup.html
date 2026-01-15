@@ -1,7 +1,127 @@
-<body class="container mt-5 text-center">
-    <h2>Bem-vindo ao Sistema MRP (IFCE)</h2>
-    <form action="/setup" method="POST" class="mt-4">
-        <input type="text" name="nome_empresa" placeholder="Nome da sua Empresa" class="form-control mb-2" required>
-        <button type="submit" class="btn btn-primary">Iniciar Sistema</button>
-    </form>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup MRP - IFCE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --python-blue: #3776AB;
+            --python-yellow: #FFD43B;
+        }
+
+        body {
+            background: #0f172a; /* Fundo escuro tecnológico */
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Container da "Cobrinha" animada */
+        .snake-container {
+            position: relative;
+            padding: 3px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+        }
+
+        /* O efeito da cobrinha rodando ao redor */
+        .snake-container::before {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 200%;
+            background: linear-gradient(var(--python-blue), var(--python-yellow));
+            animation: rotate 4s linear infinite;
+            top: -50%;
+            left: 30%;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Card interno para cobrir o centro da animação */
+        .setup-card {
+            position: relative;
+            background: #1e293b;
+            padding: 40px;
+            border-radius: 12px;
+            z-index: 1;
+            width: 400px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h2 { color: white; font-weight: 700; margin-bottom: 25px; }
+        p { color: #94a3b8; font-size: 0.9rem; }
+
+        .form-control {
+            background: #334155;
+            border: 1px solid #475569;
+            color: white;
+            padding: 12px;
+        }
+
+        .form-control:focus {
+            background: #334155;
+            color: white;
+            border-color: var(--python-blue);
+            box-shadow: 0 0 0 0.25rem rgba(55, 118, 171, 0.25);
+        }
+
+        .btn-primary {
+            background: var(--python-blue);
+            border: none;
+            padding: 12px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #2b5d87;
+            transform: translateY(-2px);
+        }
+
+        /* Partículas de fundo (opcional) */
+        .bg-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--python-blue);
+            filter: blur(120px);
+            opacity: 0.2;
+            z-index: 0;
+            top: 10%;
+            left: 10%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <div class="snake-container">
+        <div class="setup-card text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="50" class="mb-3" alt="Python Logo">
+            <h2>Sistema MRP</h2>
+            <p>Configuração Inicial da Manufatura</p>
+            
+            <form action="/setup" method="POST" class="mt-4">
+                <input type="text" name="nome_empresa" placeholder="Nome da sua Empresa" class="form-control mb-3" required>
+                <button type="submit" class="btn btn-primary w-100">Iniciar Sistema</button>
+            </form>
+            
+            <div class="mt-4">
+                <small style="color: #64748b;">Engenharia da Computação - IFCE</small>
+            </div>
+        </div>
+    </div>
+
 </body>
+</html>
