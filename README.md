@@ -38,4 +38,4 @@ O sistema está hospedado e pode ser testado no link abaixo:
 4. Acesse: `http://127.0.0.1:5000`
 
 ---
-<p align="center"> Desenvolvido por Ronaldo Maurino - Primeiro Semestre de Eng. da Computação IFCE </p>
+<p align="center"> Desenvolvido por João Leonardo - Eng. da Computação IFCE </p>
