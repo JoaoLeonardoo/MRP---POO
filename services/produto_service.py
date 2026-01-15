@@ -5,9 +5,6 @@ from models.insumo import Insumo
 class ProdutoService():
    
    def realizar_producao(self, produto_final, qtd_desejada, estoque_service):
-      if not isinstance(produto_final, ProdutoFinal):
-         raise TypeError("Este item não é um Produto Final")
-
       if not produto_final.estrutura:
          raise ValueError("Este produto não tem estrutura cadastrada")
 
