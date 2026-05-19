@@ -25,7 +25,7 @@
     <div class="row g-4">
         <div class="col-md-4">
             <div class="card p-3">
-                <h5>📦 Cadastro</h5>
+                <h5> Cadastro</h5>
                 <form action="/cadastrar" method="POST">
                     <input type="text" name="nome" placeholder="Nome" class="form-control mb-2" required>
                     <input type="text" name="codigo" placeholder="Código" class="form-control mb-2" required>
@@ -38,7 +38,7 @@
             <div class="card p-3">
                 <div class="row">
                     <div class="col-md-6 border-end">
-                        <h5 class="text-warning">🛠️ Estrutura</h5>
+                        <h5 class="text-warning"> Estrutura</h5>
                         <form action="/vincular_estrutura" method="POST">
                             <input type="text" name="pai_codigo" placeholder="Cód. Pai" class="form-control mb-1">
                             <input type="text" name="filho_codigo" placeholder="Cód. Filho" class="form-control mb-1">
@@ -47,7 +47,7 @@
                         </form>
                     </div>
                     <div class="col-md-6">
-                        <h5 class="text-danger">🚀 Produção</h5>
+                        <h5 class="text-danger"> Produção</h5>
                         <form action="/produzir" method="POST">
                             <input type="text" name="codigo" placeholder="Cód. Item" class="form-control mb-1">
                             <input type="number" name="quantidade" step="any" placeholder="Qtd desejada" class="form-control mb-2">
@@ -60,7 +60,7 @@
     </div>
 
     <div class="card mt-5 p-4 mb-5">
-        <h4>📋 Inventário</h4>
+        <h4> Inventário</h4>
         <table class="table align-middle">
             <thead><tr><th>Cód</th><th>Nome</th><th>Tipo</th><th>Estoque</th><th>Ações</th></tr></thead>
             <tbody>
